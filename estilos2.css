@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.pagina {
+    background: #D7DBDD;
+    width: 100%;
+}
+
+.inicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("img/Bulls/bulls\ celeste.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #3f3d3d;
+    background-blend-mode: overlay;
+}
+
+.inicio-portada {
+    text-align: center;
+    padding: 0 20px;
+    font-family: Helvetica, sans-serif;
+    color: #fff;
+    text-shadow: 5px 5px 5px #000;
+}
+
+.inicio-portada h1 {
+    text-transform: uppercase;
+    font-size: calc(2em + 2vw);
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.inicio-portada p {
+    font-size: calc(.8em + .8vw);
+    margin-bottom: 15px;
+}
+
+.inicio-portada button {
+    padding: 10px 35px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    background: #f6a655;
+    cursor: pointer;
+    border: none;
+}
+
+.inicio-portada button:focus {
+    outline: none;
+}
+
+
+/* SECCION MODELOS */
+
+.modelos {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica, sans-serif;
+    background: #fff;
+}
+
+.titulos-articulos {
+    font-size: 40px;
+    font-family: 'Poppins', sans-serif;
+    color: #263238;
+    text-align: center;
+    text-shadow: 1px 1px 2px #000;
+    margin: 100px 0 50px 0;
+}
+
+.modelos-camisetas {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "camiseta1" "camiseta2" "camiseta3";
+    gap: 70px;
+    justify-items: center;
+    align-items: center;
+    margin: 60px 0 100px 0;
+}
+
+.roja {
+    grid-area: camiseta1;
+}
+
+.blanca {
+    grid-area: camiseta2;
+}
+
+.negra {
+    grid-area: camiseta3;
+}
+
+.camisetas {
+    text-align: center;
+    background: chocolate;
+    margin-bottom: 20px;
+    height: 170px;
+    width: 170px;
+    border-radius: 100%;
+    position: relative;
+    cursor: pointer;
+    transform: scale(.7);
+    transition: all .5s;
+}
+
+.camisetas p {
+    display: block;
+    position: absolute;
+    bottom: -35%;
+    left: 50%;
+    width: 200px;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.camisetas:hover {
+    transform: scale(1);
+}
+
+.camisetas:hover.camisetas p {
+    opacity: 1;
+}
+
+.camisetas img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+@media screen and (min-width:600px) {
+    .modelos-camisetas {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: "camiseta1 camiseta2" "camiseta3 camiseta3";
+    }
+    .roja {
+        grid-area: camiseta1;
+    }
+    .blanca {
+        grid-area: camiseta2;
+    }
+    .negra {
+        grid-area: camiseta3;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .modelos-camisetas {
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: auto;
+        grid-template-areas: "camiseta1 camiseta2 camiseta3";
+    }
+    .roja {
+        grid-area: camiseta1;
+    }
+    .blanca {
+        grid-area: camiseta2;
+    }
+    .negra {
+        grid-area: camiseta3;
+    }
+}
+
+
+/* SECCION PRODUCTOS */
+
+.productos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.productos-lista {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.productos-items {
+    background: radial-gradient(#3a22f9, #3c72cf);
+    margin-bottom: 70px;
+    width: 90%;
+    padding: 20px 10px;
+    position: relative;
+}
+
+.productos-items h1 {
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 1px 1px 5px #000;
+    margin-bottom: 20px;
+}
+
+.productos-items p {
+    color: #fff;
+    font-size: 18px;
+    text-shadow: 1px 1px 5px #000;
+}
+
+.productos-items img {
+    padding: 10px;
+}
+
+.btn-producto {
+    margin-top: 10px;
+    padding: 10px 30px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: #24D942;
+    border: none;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.btn-producto:focus {
+    outline: none;
+}
+
+.btn-producto:active {
+    box-shadow: inset 0px 0px 0px 2px #000;
+}
+
+@media screen and (min-width:800px) {
+    .productos-items {
+        max-height: 300px;
+        text-align: left;
+    }
+    .productos-items img {
+        padding: 0;
+        width: 20%;
+        min-width: 200px;
+        float: right;
+        shape-outside: circle(50%);
+    }
+    .btn-producto {
+        float: inline-end;
+    }
+}
+
+
+/* FOOTER */
+
+footer {
+    height: 150px;
+    background: #263238;
+    clip-path: polygon(0% 0%, 100% 30%, 100% 100%, 0 100%);
+}
